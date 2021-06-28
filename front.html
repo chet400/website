@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body  {
+    background-image: url("cool-background.png");
+    background-color: #cccccc;
+  }
+  
+.dropbtn {
+  background-color: #b73e74;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: solid;
+  border-color: #e44f74;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #553071;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f96b72b4;
+  min-width: 300px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ffcf50}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+
+<p>Select the Language</p>
+
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Language</button>
+  <div id="myDropdown" class="dropdown-content">
+    
+    <a href="1.input.html">
+        <button class="block">1.Input, print and numbers</button>     
+    </a>
+    <a href="2.integer.html">
+      <button class="block">2.Integer and float numbers</button> 
+    
+
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
